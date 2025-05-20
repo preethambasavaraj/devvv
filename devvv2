@@ -17,6 +17,10 @@ COPY . /app
 RUN javac add.java
 CMD ["java","add"]
 
+For Modification
+
+print("Hello")
+
 FROM python
 WORKDIR /app
 COPY . /app
@@ -41,8 +45,13 @@ docker pull preethambasavaraj/app
 
 Program 2
 
-open maven project
+
+open maven project- internal
 maven-archetype-quickstart 1.1 
+
+group id : vvceeeee
+: commmmmmmm
+
 create a folder in maven project and name it as JSON
 In JSON create a file called student.json
 
