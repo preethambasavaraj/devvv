@@ -1,0 +1,26 @@
+class add{
+    public static void main(String[] args){
+        int a=5,b=3,c;
+        c=a+b;
+        System.out.println(c);
+    }
+}
+
+javac add.java
+java add
+
+FROM openjdk
+WORKDIR /app
+COPY . /app
+RUN javac add.java
+CMD ["java","add"]
+
+docker build -t img3 .
+docker run img3
+
+docker login 
+docker images
+docker tag img3:latest preethambasavaraj/app
+docker push preethambasavaraj/app
+docker pull preethambasavaraj/app
+
