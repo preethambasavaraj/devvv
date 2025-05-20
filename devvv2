@@ -15,6 +15,14 @@ COPY . /app
 RUN javac add.java
 CMD ["java","add"]
 
+FROM python
+WORKDIR /app
+COPY . /app
+RUN python sample.py
+CMD ["python", "sample.py"]
+
+python sample.py
+
 docker build -t img3 .
 docker run img3
 
